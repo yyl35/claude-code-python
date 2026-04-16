@@ -71,7 +71,7 @@ python -m src.main --interactive
 python start_chat.py
 
 # 然后在浏览器访问
-# http://localhost:8001
+# http://localhost:8004
 ```
 
 ### 4. 编程方式使用
