@@ -1,0 +1,120 @@
+2026-04-12 16:09:23,689 - src.chat_server - INFO - 初始化聊天服务器...
+2026-04-12 16:09:23,693 - src.chat_memory - INFO - 记忆管理器初始化完成，已加载 15 个会话
+2026-04-12 16:09:23,693 - src.chat_server - INFO - 聊天服务器初始化完成
+2026-04-12 16:09:23,693 - src.chat_server - INFO - 启动聊天服务器: http://0.0.0.0:8001
+INFO:     Started server process [92676]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+============================================================
+DevOps Agent 聊天界面
+============================================================
+使用环境变量文件: E:\project\oh-my-claudecode-main\devops-agent\.env
+  设置: OPENAI_API_KEY=****
+  设置: OPENAI_BASE_URL=https://api.deepseek.com/v1
+  设置: MCP_SERVER_URL=http://127.0.0.1:8000/sse
+  设置: WORKSPACE_PATH=./test_workspace
+  设置: MEMORY_PATH=test_memory.json
+
+启动聊天服务器...
+初始化服务器...
+[成功] 服务器初始化成功
+
+============================================================
+聊天服务器已启动！
+============================================================
+
+访问地址:
+  [Web] Web界面: http://localhost:8001
+  [健康] 健康检查: http://localhost:8001/api/health
+  [状态] 状态信息: http://localhost:8001/api/status
+
+使用说明:
+  1. 打开浏览器访问 http://localhost:8001
+  2. 在聊天框中输入任务
+  3. 按回车或点击发送按钮
+  4. 等待代理处理并返回结果
+
+示例任务:
+  - 读取 /etc/hosts 文件
+  - 在当前目录执行 ls -la 命令
+  - 获取贵州茅台(600519)的股票数据
+  - 创建Python脚本文件 test.py
+
+按 Ctrl+C 停止服务器
+============================================================
+INFO:     127.0.0.1:63521 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51933 - "WebSocket /ws/session_1775981363985_iv8ztwaxo" [accepted]
+INFO:     connection open
+2026-04-12 16:09:40,209 - src.chat_server - INFO - WebSocket连接断开: session_1775981363985_iv8ztwaxo
+INFO:     connection closed
+INFO:     127.0.0.1:64949 - "WebSocket /ws/session_1775981385354_9plj2fdll" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65017 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65437 - "WebSocket /ws/test_session_1775981543" [accepted]
+INFO:     connection open
+2026-04-12 16:12:25,296 - src.chat_memory - INFO - 创建新会话: test_session_1775981543
+2026-04-12 16:12:26,055 - mcp.client.sse - INFO - Connecting to SSE endpoint: http://127.0.0.1:8000/sse
+2026-04-12 16:12:26,267 - httpx - INFO - HTTP Request: GET http://127.0.0.1:8000/sse "HTTP/1.1 200 OK"
+2026-04-12 16:12:26,268 - mcp.client.sse - INFO - Received endpoint URL: http://127.0.0.1:8000/messages/?session_id=863137bb51ce4d0e81e86c30b650ee02
+2026-04-12 16:12:26,268 - mcp.client.sse - INFO - Starting post writer with endpoint URL: http://127.0.0.1:8000/messages/?session_id=863137bb51ce4d0e81e86c30b650ee02
+2026-04-12 16:12:26,270 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=863137bb51ce4d0e81e86c30b650ee02 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,272 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=863137bb51ce4d0e81e86c30b650ee02 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,273 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=863137bb51ce4d0e81e86c30b650ee02 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,295 - mcp.client.sse - INFO - Connecting to SSE endpoint: http://127.0.0.1:8000/sse
+2026-04-12 16:12:26,514 - httpx - INFO - HTTP Request: GET http://127.0.0.1:8000/sse "HTTP/1.1 200 OK"
+2026-04-12 16:12:26,515 - mcp.client.sse - INFO - Received endpoint URL: http://127.0.0.1:8000/messages/?session_id=ddb47e742b224b90a7259186dde463a5
+2026-04-12 16:12:26,515 - mcp.client.sse - INFO - Starting post writer with endpoint URL: http://127.0.0.1:8000/messages/?session_id=ddb47e742b224b90a7259186dde463a5
+2026-04-12 16:12:26,517 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ddb47e742b224b90a7259186dde463a5 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,519 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ddb47e742b224b90a7259186dde463a5 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,520 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ddb47e742b224b90a7259186dde463a5 "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:26,846 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     connection closed
+2026-04-12 16:12:28,383 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 16:12:36,590 - mcp.client.sse - INFO - Connecting to SSE endpoint: http://127.0.0.1:8000/sse
+2026-04-12 16:12:36,729 - httpx - INFO - HTTP Request: GET http://127.0.0.1:8000/sse "HTTP/1.1 200 OK"
+2026-04-12 16:12:36,729 - mcp.client.sse - INFO - Received endpoint URL: http://127.0.0.1:8000/messages/?session_id=ad1ebda074a54dcdbc5d25ccb9b39aef
+2026-04-12 16:12:36,729 - mcp.client.sse - INFO - Starting post writer with endpoint URL: http://127.0.0.1:8000/messages/?session_id=ad1ebda074a54dcdbc5d25ccb9b39aef
+2026-04-12 16:12:36,730 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ad1ebda074a54dcdbc5d25ccb9b39aef "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:36,732 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ad1ebda074a54dcdbc5d25ccb9b39aef "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:36,733 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=ad1ebda074a54dcdbc5d25ccb9b39aef "HTTP/1.1 202 Accepted"
+2026-04-12 16:12:37,365 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 16:12:57,696 - src.chat_server - ERROR - 处理消息失败: 
+2026-04-12 16:12:57,696 - src.chat_server - ERROR - WebSocket错误: Cannot call "send" once a close message has been sent.
+初始化DevOps代理...
+[OK] 已连接MCP服务器，发现 55 个工具
+[OK] 代理执行器初始化完成，加载了 55 个工具
+[OK] 代理执行器初始化完成
+已加载 18 条历史记录
+[OK] 状态管理器初始化完成
+
+可用技能:
+  - file_operations: 处理文件创建、读取、写入、删除等操作
+  - command_execution: 执行系统命令和脚本（智能工具选择）
+  - code_development: 代码文件创建、修改和测试
+  - data_fetching: 获取股票数据、市场数据等（智能工具选择）
+
+DevOps代理就绪！
+自动识别技能: command_execution
+command_execution技能，使用execute_direct进行智能总结...
+[调试] 第 1 次迭代
+[调试] 发现 1 个工具调用
+[调试] 执行工具: execute_shell_command, 参数: {'command': 'powershell -Command "Get-PSDrive -PSProvider FileSystem | Select-Object Name, Used, Free, @{Name=\'UsedGB\';Expression={[math]::Round($_.Used/1GB, 2)}}, @{Name=\'FreeGB\';Expression={[math]::Round($_.Free/1GB, 2)}}, @{Name=\'TotalGB\';Expression={[math]::Round(($_.Used + $_.Free)/1GB, 2)}}"', 'description': '获取所有文件系统驱动器的使用情况，包括已用空间、剩余空间和总空间（以GB为单位）'}
+[调试] 请求总结，已收集 1 个工具结果
+INFO:     127.0.0.1:51176 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51210 - "WebSocket /ws/test_session_1775982018" [accepted]
+INFO:     connection open
+2026-04-12 16:20:20,333 - src.chat_memory - INFO - 创建新会话: test_session_1775982018
+2026-04-12 16:20:20,439 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 16:20:21,713 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     connection closed
+2026-04-12 16:20:28,247 - mcp.client.sse - INFO - Connecting to SSE endpoint: http://127.0.0.1:8000/sse
+2026-04-12 16:20:28,389 - httpx - INFO - HTTP Request: GET http://127.0.0.1:8000/sse "HTTP/1.1 200 OK"
+2026-04-12 16:20:28,389 - mcp.client.sse - INFO - Received endpoint URL: http://127.0.0.1:8000/messages/?session_id=d5cd917cc3c245158644acb195501eb7
+2026-04-12 16:20:28,389 - mcp.client.sse - INFO - Starting post writer with endpoint URL: http://127.0.0.1:8000/messages/?session_id=d5cd917cc3c245158644acb195501eb7
+2026-04-12 16:20:28,391 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=d5cd917cc3c245158644acb195501eb7 "HTTP/1.1 202 Accepted"
+2026-04-12 16:20:28,392 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=d5cd917cc3c245158644acb195501eb7 "HTTP/1.1 202 Accepted"
+2026-04-12 16:20:28,393 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/messages/?session_id=d5cd917cc3c245158644acb195501eb7 "HTTP/1.1 202 Accepted"
+2026-04-12 16:20:28,930 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 16:20:46,275 - src.chat_server - ERROR - 处理消息失败: 
+2026-04-12 16:20:46,275 - src.chat_server - ERROR - WebSocket错误: Cannot call "send" once a close message has been sent.
