@@ -233,7 +233,7 @@ MEMORY_PATH=agent_memory.json
 python start_chat.py
 
 # 访问Web界面
-# http://localhost:8001
+# http://localhost:8004
 ```
 
 ### 详细文档
