@@ -44,16 +44,16 @@ cp .env.example .env
 
 ```bash
 # 读取文件
-python -m src.main --task "读取 /etc/hosts 文件"
+python -m src.main --task "修改nginx配置，删掉缓存相关配置"
 
 # 执行命令
-python -m src.main --task "在当前目录执行 ls -la 命令"
+python -m src.main --task "检查docker镜像，并找出占用硬盘空间大的镜像"
 
 # 获取股票数据
 python -m src.main --task "获取贵州茅台(600519)的股票数据"
 
 # 使用特定技能
-python -m src.main --task "创建Python脚本文件 test.py" --skill file_operations
+python -m src.main --task "创建一个计算最大回撤的python脚本，并用真实数据验证" --skill skill_name
 
 # MCP服务器地址已配置为: http://127.0.0.1:8000/sse
 ```
